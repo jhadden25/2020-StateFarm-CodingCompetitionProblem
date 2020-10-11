@@ -1,10 +1,12 @@
 Your team (name of each individual participating):
 Joshua Hadden & Scott Hunt
 How many JUnits were you able to get to pass? 
+0 JUnits Passed
 
 Document and describe any enhancements included to help the judges properly grade your submission.
-	Step 1:
-	Step 2: 
+No Enhancements
 	
 	
 Feedback for the coding competition?  Things you would like to see in future events?
+
+Very difficult competition due to lack of assistance in setting up programming environment. Simply running JUnit tests got in the way of programming the actual problems. Directions were unclear as to where to begin programming. My team did not see the file with the included comments for how to proceed with passing the tests for the first hour and a half. As senior computer science students, this challenge was also way above our heads and this was a very difficult task that made us feel uncertain about our skills.
