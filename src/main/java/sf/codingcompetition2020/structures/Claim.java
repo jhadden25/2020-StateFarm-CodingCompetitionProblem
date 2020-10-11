@@ -5,5 +5,10 @@ public class Claim {
 	private int customerId;
 	private boolean closed;
 	private int monthsOpen;
+
+	public int getClaimId()
+	{
+		return this.claimId;
+	}
 	
 }

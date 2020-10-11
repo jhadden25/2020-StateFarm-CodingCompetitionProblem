@@ -10,6 +10,12 @@ import java.util.Map.Entry;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.stream.Collectors;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
+
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.MappingIterator;
 import com.fasterxml.jackson.databind.ObjectReader;
@@ -31,8 +37,28 @@ public class CodingCompCsvUtil {
 	 */
 	public <T> List<T> readCsvFile(String filePath, Class<T> classType) {
 
-	}
-
+			int count = 0;
+			List<T> myList = new ArrayList<T>();
+			try{
+				File file = new File(filePath);
+				Scanner scanner = new Scanner(file);
+	
+				scanner.useDelimiter(",");
+				
+				while(scanner.hasNext())
+				{
+					T doc = (T)(scanner.getClass());
+					myList.add(doc);
+				}
+				scanner.close();
+			}
+				catch (FileNotFoundException fe) 
+				{
+					fe.printStackTrace();
+				}
+	
+				return myList;
+		}
 	
 	/* #2
 	 * getAgentCountInArea() -- Return the number of agents in a given area.
